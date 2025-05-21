@@ -90,3 +90,27 @@ For an application with 100,000 daily users, robust monitoring and a clear maint
     *   **Documentation:** Maintain up-to-date documentation for the codebase, architecture ([`README.md`](README.md)), deployment processes, and troubleshooting guides.
     *   **Scalability Planning:** Regularly review performance metrics and Vercel usage to anticipate scaling needs.
     *   **Backup and Recovery:** While Vercel handles infrastructure, ensure any external databases or stateful services have appropriate backup and recovery plans.
+
+   Install dependencies:
+   ```bash
+   npm install
+   ```
+
+  ## Running the Application
+
+  Development mode:
+  ```bash
+  npm run dev
+  ```
+
+ ## Testing
+
+Run tests:
+```bash
+npm test
+```
+
+Run tests with watch mode:
+```bash
+npm run test:watch
+```
