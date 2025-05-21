@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #222222;
+
+  /* Rick and Morty theme colors */
+  --primary: #97ce4c; /* Portal green */
+  --primary-dark: #6fb833; /* Darker portal green */
+  --secondary: #44281d; /* Brown from Rick's outfit */
+  --accent: #00b5cc; /* Portal blue/cyan */
+  --accent-dark: #0097ab; /* Darker portal blue */
+  --danger: #fb6467; /* Red from logo */
+  --warning: #f0e14a; /* Yellow/gold from Rick's shirt */
+
+  /* UI colors */
+  --card-bg: #f5f5f7;
+  --border: #e2e8f0;
+  --muted: #8892b0;
+
+  /* Status colors */
+  --status-alive: #55cc44;
+  --status-dead: #d63d2e;
+  --status-unknown: #aeaeae;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-card-bg: var(--card-bg);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-status-alive: var(--status-alive);
+  --color-status-dead: var(--status-dead);
+  --color-status-unknown: var(--status-unknown);
+  --font-sans: var(--font-geist-sans, system-ui, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1a;
+    --foreground: #f5f5f7;
+    --card-bg: #2c2c2c;
+    --border: #3c3c3c;
+    --muted: #6c7086;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Utility classes for status indicators */
+.status-alive {
+  color: var(--status-alive);
+}
+
+.status-dead {
+  color: var(--status-dead);
+}
+
+.status-unknown {
+  color: var(--status-unknown);
+}
